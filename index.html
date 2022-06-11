@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://unpkg.com/@botpoison/browser" async></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -57,7 +58,7 @@
 								<p>Aqui será aonde coletaremos os dados para nossa pesquisa. E não se preocupe, serão todos anonimos (Leia nosso <a href="#sobre">Aviso de Privacidade</a> ;).</p>
 								<p>Os alunos que optaram por compartilhar os seus dados de uso deveram fazer o formulário clicando no botão lado: &nbsp; <a href="#" onclick="alert('O formulário está fechado. Ele irá abrir no dia 19.\nLembre-se de baixar o aplicativo StayFree para enviar o relatório.')"class="button icon solid fa-arrow-up-right-from-square">Formulário Especial</a></p>
 								<h3 class="major">Formulário de Pesquisa</h3>
-								<form method="post" action="https://submit-form.com/tQn7TeWD">
+								<form method="post" action="https://submit-form.com/tQn7TeWD" data-botpoison-public-key="pk_04a157bd-4957-4004-b3c5-9934daef738f">
 									<div class="fields">
 										<div class="field">
 										   <label for="apps-quais">Qual app vpcê mais usa no seu dia-a-dia?</label>
@@ -120,7 +121,7 @@
                                                                                 <input type="hidden" name="_feedback.dark" value="true" />
                                                                                 <input type="hidden" name="_feedback.language" value="pt" />
                                                                                 <input type="hidden" name="_feedback.success.message" value="Agradecemos sua particpação!" />
-										<li><a class="button primary icon solid fa-paper-plane"><input type="submit" value="Enviar" class="button primary" /></a></li>
+										<li><button type="submit" class="button primary icon solid fa-paper-plane">Enviar</button></li>
 										<li><input type="reset" value="Limpar"/></li>
 									</ul>
 								</form>
