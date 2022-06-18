@@ -5,7 +5,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="https://unpkg.com/@botpoison/browser" async></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -196,36 +195,56 @@
 								<span class="image fit"><img src="images/stayfree/2.jpg"/></span>
 								<p>Depois disso, clique em intervalo de data</p>
 								<span class="image fit"><img src="images/stayfree/3.jpg"/></span>
-								<p>E selecione <strong>12 de junho</strong>. Talvez seja necessário clicar duas vezes na data.</p>
+								<p>E selecione <strong>11 de junho</strong> e depois <strong>19 de junho</strong>.</p>
 								<span class="image fit"><img src="images/stayfree/4.jpg"/></span>
-								<p>Então, confira se a data está como <strong>12 de junho</strong>, e depois clique em &nbsp; <span class="icon solid fa-check"></span></p>
+								<p>Se a data está como <strong>11 de junho a 19 de junho</strong>, clique em &nbsp; <span class="icon solid fa-check"></span> &nbsp;  para exportar o relatório.</p>
 								<span class="image fit"><img src="images/stayfree/5.jpg"/></span>
 								<p>Após isso, irá aparecer uma tela para salvar o arquivo, escolha uma pasta fácil de lembrar, como a de Download.<br>
 								Então clique em <strong>Salvar</strong>.</p>
 								<span class="image fit"><img src="images/stayfree/6.jpg"/></span>
+								<p>Se a seguinte mensagem aparecer, o relatório foi exportado com sucesso!</p>
+								<span class="image fit"><img src="images/stayfree/7.jpg"/></span>
 
+								<h3 class="major">Enviar relatório</h3>
 								
-								<!--<form method="post" action="https://formspree.io/f/meqndkyd">
+								<form method="post" action="https://formspree.io/f/meqndkyd">
 									<div class="fields">
-										<div class="field half">
-											<label for="name">Nome</label>
-											<input type="text" name="name" id="name" required/>
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="email" name="email" id="email" required/>
-										</div>
 										<div class="field">
-											<label for="message">Mensagem</label>
-											<textarea name="message" id="message" rows="4" required></textarea>
+											<label for="b64" class="button primary icon solid fa-file-arrow-up">Enviar seu arquivo</label>
+											<input type="file" name="b64" id="b64" accept=".xls, application/vnd.ms-excel" required hidden/>
+											<input type="hidden" name="arquivobase64" id="arquivobase64" required/>
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Enviar mensagem" class="primary" /></li>
+										<li><button id="uploadb64" class="button primary icon solid fa-upload">Enviar</button></li>
 										<li><input type="reset" value="Limpar" /></li>
 									</ul>
-								</form>-->
-								
+								</form>
+								<script>
+									var d = String;
+									document.getElementById('b64').addEventListener('change', function() {
+									  var file = document.getElementById('b64').files[0];
+									  if (file.size > 1 && file.type == "application/vnd.ms-excel") {
+									  getBase64(file);
+									  } else {
+										alert("Arquivo inválido!\nVerifique se é uma planilha do Excel.");
+										document.getElementById('b64').value = "";
+									  }
+									});
+
+									function getBase64(file) {
+										var reader = new FileReader();
+										reader.readAsDataURL(file);
+										reader.onload = function () {
+									 	d = reader.result;
+										document.getElementById('arquivobase64').value = d;
+									  	};
+									  reader.onerror = function (error) {
+										 console.log('Error: ', error);
+										 alert(error)
+									   };
+									}
+								</script>
 								</article>
 						
 					</div>
@@ -246,6 +265,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
