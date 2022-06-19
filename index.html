@@ -54,8 +54,9 @@
 							<article id="pesquisa">
 								<h2 class="major">Pesquisa</h2>
 								<span class="image main"><img src="images/im2.jpg" alt="" /></span>
-								<p>Aqui será aonde coletaremos os dados para nossa pesquisa. E não se preocupe, serão todos anonimos (Leia nosso <a href="#sobre">Aviso de Privacidade</a> ;).</p>
-								<p>Os alunos que optaram por compartilhar os seus dados de uso deveram fazer o formulário clicando no botão lado: &nbsp; <a href="#" onclick="alert('O formulário está fechado. Ele irá abrir no dia 19.\nLembre-se de baixar o aplicativo StayFree para enviar o relatório.')"class="button icon solid fa-arrow-up-right-from-square">Formulário Especial</a></p>
+								<p>Aqui será aonde coletaremos os dados para nossa pesquisa. E não se preocupe, serão todos anônimos (Que tal ler nosso <a href="#sobre">Aviso de Privacidade</a> ;-).</p>
+								<p>Os alunos que quiserem por compartilhar os seus dados de uso podem fazer o formulário clicando no botão lado: &nbsp; <a href="#form2" class="button icon solid fa-arrow-up-right-from-square">Formulário Especial</a></p>
+								<p>Note que, caso tenha um dispositivo iOS (iPhone, iPad, etc) e queira compartilhar os seus dados de uso, infelizmente por limatações do sistema operacional, não é possivel fazer a coleta desses dados.</p>
 								<h3 class="major">Formulário de Pesquisa</h3>
 								<form method="post" action="https://submit-form.com/tQn7TeWD" data-botpoison-public-key="pk_04a157bd-4957-4004-b3c5-9934daef738f">
 									<div class="fields">
@@ -117,9 +118,9 @@
 										</div>
 									</div>
 									<ul class="actions">
-                                                                                <input type="hidden" name="_feedback.dark" value="true" />
-                                                                                <input type="hidden" name="_feedback.language" value="pt" />
-                                                                                <input type="hidden" name="_feedback.success.message" value="Agradecemos sua particpação!" />
+                                        <input type="hidden" name="_feedback.dark" value="true" />
+                                        <input type="hidden" name="_feedback.language" value="pt" />
+                                        <input type="hidden" name="_feedback.success.message" value="Agradecemos sua particpação!" />
 										<li><button type="submit" class="button primary icon solid fa-paper-plane">Enviar</button></li>
 										<li><input type="reset" value="Limpar"/></li>
 									</ul>
@@ -184,11 +185,12 @@
 						<!-- Formulário 2 -->
 							<article id="form2">
 								<h2 class="major">Envio do relatório</h2>
-								<p><strong>ESSE FORMULÁRIO É APENAS PARA QUEM OPTOU MOSTRAR O TEMPO DE USO.</strong> <br>
-								Se você não quer enviar o seu tempo de uso e/ou tem um iPhone/iPad, faça o formulário de pesquisa clicando ao lado: &nbsp; <a href="#pesquisa" class="button icon solid fa-arrow-up-right-from-square">Pesquisa</a></p>
+								<p><i class="fa-solid fa-circle-exclamation"></i>&nbsp; Note que este formulário é para ser feito por quem teve o interesse em compartilhar os seus dados de uso usando o aplicativo StayFree. </p>
+								<p><a href="#pesquisa" class="button primary icon brands fa-android">Baixe o StayFree aqui.</a></p>
+								<p>Se você não quer enviar o seu tempo de uso e/ou tem um iPhone/iPad, você pode fazer o formulário de pesquisa clicando ao lado: &nbsp; <a href="#pesquisa" class="button icon solid fa-arrow-up-right-from-square">Pesquisa</a></p>
 								<p>Veja como exportar seu relatório a seguir:</p>
 
-								<h3 class="major">Exportar relatório</h3>
+								<h3 class="major">Exportando seu relatório</h3>
 								<p>Abra o aplicativo, e clique no menu, como na imagem a seguir:</p>
 								<span class="image main"><img src="images/stayfree/1.jpg"/></span>
 								<p>E então, clique em <strong>"Exportar para CSV"</strong>.</p>
@@ -206,7 +208,7 @@
 								<span class="image fit"><img src="images/stayfree/7.jpg"/></span>
 
 								<h3 class="major">Enviar relatório</h3>
-								
+								<p>Agora iremos enviar o arquivo que foi exportado. Cuidado para não escolher o arquivo errado.</p>
 								<form method="post" action="https://formspree.io/f/meqndkyd">
 									<div class="fields">
 										<div class="field">
@@ -214,7 +216,9 @@
 											<input type="file" name="b64" id="b64" accept=".xls, application/vnd.ms-excel" required hidden />
 											<input type="hidden" name="arquivobase64" id="arquivobase64" required/>
 										</div>
+										
 									</div>
+									
 									<ul class="actions">
 										
 										<li><button id="uploadb64" class="button primary icon solid fa-upload">Enviar</button></li>
